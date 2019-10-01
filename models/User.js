@@ -27,7 +27,7 @@ const UserSchema = new Schema({
     trim: true,
     unique: 1,
   },
-  imageID: {
+  imageURL: {
     type: String,
     required: false,
   },

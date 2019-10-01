@@ -7,6 +7,7 @@ exports.typeDefs = `
         category: String!
         description: String!
         instructions: String!
+        imageURL: String
         createdDate: String
         likes: Int
         username: String
@@ -14,11 +15,11 @@ exports.typeDefs = `
 
     type User {
         _id: ID
-        firstname: String
-        lastname: String
+        firstname: String!
+        lastname: String!
         password: String!
         email: String! @unique
-        imageID: String
+        imageURL: String
         token: String
         joinDate: String
         favorites: [Recipe]
