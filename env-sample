@@ -1,6 +1,0 @@
-MONGO_URI=mongodb+srv://janbryanmartirez:thepassword123@ultracluster-yqqzs.mongodb.net/test?retryWrites=true&w=majority
-SECRET=wowowowowowoweeeedooggeeee11213
-AWSAccessKeyId=5634JT62D7PWAG4
-AWSSecretKey=TilkWAVzGnsamFGDC
-AWSBucket=ultrabryan-image-bucket
-AWSregion=ap-southeast-1
