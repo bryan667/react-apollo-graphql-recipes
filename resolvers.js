@@ -61,25 +61,24 @@ exports.resolvers = {
       return { token: savedUser.token };
     },
 
-    imageUpload: async (root, { input }, { User }) => {
-      const { files } = input;
+    recipeImageUpload: async (root, { input }, { User }) => {
+      const { recipeId, files } = input;
 
-      const imageMetaData = [];
-      files.forEach(async (file, index) => {
+      const imageMetaData = await files.map(async (file, index) => {
         const { filename, mimetype, encoding } = await file;
         const url = await performUpload(null, file);
-        console.log('url', url);
-
-        imageMetaData.push({
+        const imgData = {
           id: index,
-          url: `path/${index}`,
+          url: `${url}`,
           name: filename,
           mimetype,
           encoding,
-        });
+        };
+        console.log('imgData', imgData);
+        return imgData;
       });
 
-      return await imageMetaData;
+      return;
     },
   },
 };

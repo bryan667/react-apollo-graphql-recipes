@@ -8,6 +8,7 @@ require('dotenv').config({ path: '.env' });
 //mongoose schemas
 const Recipe = require('./models/Recipe');
 const User = require('./models/User');
+const Image = require('./models/Image');
 
 const { ApolloServer, gql } = require('apollo-server-express');
 
@@ -20,6 +21,7 @@ const server = new ApolloServer({
   context: ({ req }) => ({
     Recipe,
     User,
+    Image,
   }),
 });
 
