@@ -1,18 +1,17 @@
+ul {
+  max-width: 1257px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  margin: auto;
+}
 
-  ul {
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    padding: 10px;
-    margin: 0 auto;
-  }
+.card-container {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+}
 
-  .container {
-    display: flex;
-    margin: 30px;
-    padding: 10px;
-    cursor: pointer;
-  } 
-
-  h1 {
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+}
