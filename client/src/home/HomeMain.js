@@ -12,11 +12,10 @@ const HomeMain = () => {
   if (error) return <div>Error {`${error}`}</div>;
   
   return (
-    <div className="Home">
-      <h1>Home</h1>
-      <ul>{data.getAllRecipes.map(recipe=> 
+    <div className="recipes">
+      {data.getAllRecipes.map(recipe=> 
         <RecipeList recipe={recipe} key={recipe._id}/>)}
-      </ul>
+      
     </div>
   );
 };

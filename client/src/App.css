@@ -1,17 +1,5 @@
-ul {
-  max-width: 1257px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 10px;
-  margin: auto;
-}
-
-.card-container {
+.recipes{
   display: flex;
-  padding: 20px;
-  cursor: pointer;
-}
-
-h1 {
-  text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

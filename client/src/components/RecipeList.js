@@ -1,27 +1,15 @@
-import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import React from 'react';
 import Img from '../img/temp-food.jpg';
+import style from './recipe.module.css';
 
-export default class RecipeList extends Component {
-  render() {
-    const { name, category, description, instructions } = this.props.recipe;
+export default  function RecipeList ({recipe}){
+    const { name, description } = recipe;
     return (
-      <div class="card-container">
-        <Card style={{ minWidth: '260px', width: '100%' }}>
-          <Card.Img variant="top" src={Img} alt="Logo" background="center" />
-          <Card.Body>
-            <Card.Title>
-              <span>{name}</span>
-            </Card.Title>
-            <Card.Text>
-              <span>{category}</span>
-              <br />
-              <span>{description}</span>
-              <span>{instructions}</span>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
+    <div className={style.recipe}>
+      <img className={style.image} src={Img} alt=""/>
+      <h3 className={style.name}>{name}</h3>
+      <p className={style.description}>{description}</p>
+    </div>
     );
   }
-}
+
