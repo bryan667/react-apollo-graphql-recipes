@@ -11,7 +11,7 @@ class S3 {
   }
 
   upload(stream, fileName) {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const s3obj = new AWS.S3({
         params: {
           Key: fileName,

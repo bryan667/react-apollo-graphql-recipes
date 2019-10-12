@@ -24,8 +24,8 @@ const RecipeSchema = new Schema({
     required: true,
   },
   imageURL: {
-    type: String,
-    required: false,
+    type: [Schema.Types.ObjectId],
+    ref: 'Image',
   },
   createdDate: {
     type: Date,

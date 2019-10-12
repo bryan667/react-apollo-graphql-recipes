@@ -7,7 +7,7 @@ exports.typeDefs = `
         category: String!
         description: String!
         instructions: String!
-        imageURL: String
+        imageURL: [Image]
         createdDate: String
         likes: Int
         username: String
@@ -25,6 +25,14 @@ exports.typeDefs = `
         favorites: [Recipe]
     }
 
+    type Image {
+        id: ID!
+        url: String!
+        name: String!
+        mimetype: String!
+        encoding: String
+    }
+
     type Token {
         token: String!
     }
@@ -33,15 +41,8 @@ exports.typeDefs = `
         getAllRecipes: [Recipe]
     }
 
-    type ImageDoc {
-        id: ID!
-        url: String!
-        name: String!
-        mimetype: String!
-        encoding: String
-    }
-
-    input ImageUploadInput {
+    input RecipeImageUploadInput {
+        recipeId: ID!
         files: [Upload!]!
     }
 
@@ -49,6 +50,6 @@ exports.typeDefs = `
         addRecipe(name: String!, description: String!, category: String!, instructions: String!, username: String): Recipe
         signinUser(email: String!, password: String!): Token
         registerNewUser(firstname: String!, lastname: String!, email: String!, password: String!): User
-        imageUpload(input: ImageUploadInput!): [ImageDoc]
+        recipeImageUpload(input: RecipeImageUploadInput!): [Recipe]
     }
 `;
