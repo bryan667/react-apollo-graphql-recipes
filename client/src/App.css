@@ -1,10 +1,11 @@
-.recipes{
+.recipes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 300px;
+  max-width: 1400px;
+  margin: auto;
 }
 
-h1{
+h1 {
   text-align: center;
-} 
+}
